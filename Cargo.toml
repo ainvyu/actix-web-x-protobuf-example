@@ -1,0 +1,28 @@
+[package]
+name = "actix-web-x-protobuf-example"
+version = "0.1.0"
+authors = ["eniv <ainvyu@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "gen"
+path = "src/bin/gen.rs"
+
+[[bin]]
+name = "server"
+path = "src/main.rs"
+
+
+[dependencies]
+actix-web = "1.0.2"
+clap = "2.33.0"
+futures = "0.1.27"
+actix-multipart = "0.1.2"
+actix = "0.8.3"
+env_logger = "0.6.1"
+bytes = { version = "0.4" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0" }
+protobuf = { git = "https://github.com/stepancheg/rust-protobuf", features = ["with-bytes"] }
+protoc-rust = { git = "https://github.com/stepancheg/rust-protobuf" }
+serde_derive = "1.0.92"

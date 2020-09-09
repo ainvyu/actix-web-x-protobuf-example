@@ -1,0 +1,4 @@
+syntax = "proto3";
+import "test.proto";
+
+option (rustproto.serde_derive_all) = true;

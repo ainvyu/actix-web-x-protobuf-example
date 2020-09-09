@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+message Item {
+    string name = 1;
+    int32 count = 2;
+}
+
+
+message Character {
+    message Stat {
+        int32 level = 3;
+        int32 exp = 4;
+    }
+
+    enum Class {
+        WIZARD = 0;
+        SWORDMAN = 1;
+    }
+
+    string name = 1;
+    Class class = 2;
+    Stat stat = 3;
+    repeated Item own_items = 4;
+}
